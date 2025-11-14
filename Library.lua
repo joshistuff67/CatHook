@@ -1701,7 +1701,7 @@
             Library.Blur = Library:Create( "BlurEffect" , {
                 Parent = Lighting;
                 Enabled = true;
-                Size = 0
+                Size = 100
             });
 
             Library.KeybindList = Library:StatusList({Name = "Keybinds"})
@@ -4955,7 +4955,7 @@
 
                     themes.preset.textsize = int
                 end})
-                Section:Slider({Name = "Blur Intensity", Default = 0, Decimal = 1, Min = 1, Max = 100, Flag = "BlurSize", Callback = function(int)
+                Section:Slider({Name = "Blur Intensity", Default = 1, Decimal = 1, Min = 1, Max = 100, Flag = "BlurSize", Callback = function(int)
                     if Window.Items.Holder.Visible then 
                         Library.Blur.Size = int
                     end 
