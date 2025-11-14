@@ -1701,7 +1701,7 @@
             Library.Blur = Library:Create( "BlurEffect" , {
                 Parent = Lighting;
                 Enabled = true;
-                Size = 0
+                Size = 1
             });
 
             Library.KeybindList = Library:StatusList({Name = "Keybinds"})
