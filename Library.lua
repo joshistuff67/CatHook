@@ -7991,7 +7991,7 @@
                     });
 
                     Items.HealthbarText = Esp:Create( "TextLabel", {
-                        FontFace = Fonts.fs-tahoma-8px;
+                        FontFace = Fonts.Tahoma;
                         TextColor3 = rgb(255, 255, 255);
                         BorderColor3 = rgb(0, 0, 0);
                         Parent = Esp.Cache; -- Items.HealthbarTextsLeft
@@ -8013,7 +8013,7 @@
 
                 -- Texts
                     Items.Text = Esp:Create( "TextLabel", {
-                        FontFace = Fonts.fs-tahoma-8px;
+                        FontFace = Fonts.Tahoma;
                         TextColor3 = rgb(255, 255, 255);
                         BorderColor3 = rgb(0, 0, 0);
                         Parent = Esp.Cache;
@@ -8033,7 +8033,7 @@
                     });
 
                     Items.Distance = Esp:Create( "TextLabel", {
-                        FontFace = Fonts.fs-tahoma-8px;
+                        FontFace = Fonts.Tahoma;
                         TextColor3 = rgb(255, 255, 255);
                         BorderColor3 = rgb(0, 0, 0);
                         Parent = Esp.Cache;
