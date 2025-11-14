@@ -1957,7 +1957,7 @@
                     return 
                 end     
 
-                Library:Tween(Library.Blur, {Size = bool and (Flags["BlurSize"] or 15) or 0})
+                Library:Tween(Library.Blur, {Size = bool and (Flags["BlurSize"] ~= nil and Flags["BlurSize"] or 1) or 0})
 
                 Cfg.Tween(bool)
             end 
