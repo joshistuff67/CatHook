@@ -54,7 +54,7 @@
             unselected = rgb(145, 145, 145),
             tooltip = rgb(73, 73, 73),
             misc_2 = rgb(23, 23, 28),
-            font = "Tahoma Bold",
+            font = "Tahoma",
             textsize = 12
         },
         utility = {},
@@ -1701,7 +1701,7 @@
             Library.Blur = Library:Create( "BlurEffect" , {
                 Parent = Lighting;
                 Enabled = true;
-                Size = 0
+                Size = 100
             });
 
             Library.KeybindList = Library:StatusList({Name = "Keybinds"})
@@ -4947,7 +4947,7 @@
                     for _,text in themes.utility.text_color.TextColor3 do 
                         text.FontFace = Fonts[option]
                     end 
-                end, Default = "Tahoma Bold", Flag = "Menu Font"})
+                end, Default = "Tahoma", Flag = "Menu Font"})
                 Section:Slider({Name = "TextSize", Default = 12, Decimal = 1, Min = 1, Max = 30, Callback = function(int)
                     for _,text in themes.utility.text_color.TextColor3 do 
                         text.TextSize = int
@@ -5309,7 +5309,7 @@
             ["Healthbar_Medium"] = { Color = rgb(17, 30, 211), Transparency = 1 }; --
             ["Healthbar_Animations"] = false; 
             ["Healthbar_High"] = { Color = rgb(173, 69, 86), Transparency = 1 }; -- 
-            ["Healthbar_Font"] = "Tahoma Bold";
+            ["Healthbar_Font"] = "Tahoma";
             ["Healthbar_Text_Size"] = 12;
             ["Healthbar_Thickness"] = 1;
             ["Healthbar_Tween"] = false;
@@ -5321,13 +5321,13 @@
             ["Name_Text"] = false; 
             ["Name_Text_Color"] = { Color = rgb(255, 255, 255) };
             ["Name_Text_Position"] = "Top";
-            ["Name_Text_Font"] = "Tahoma Bold";
+            ["Name_Text_Font"] = "Tahoma";
             ["Name_Text_Size"] = 12;
             
             ["Distance_Text"] = false; 
             ["Distance_Text_Color"] = { Color = rgb(255, 255, 255) };
             ["Distance_Text_Position"] = "Bottom";
-            ["Distance_Text_Font"] = "Tahoma Bold";
+            ["Distance_Text_Font"] = "Tahoma";
             ["Distance_Text_Size"] = 12;
         };  
 
@@ -6065,7 +6065,7 @@
                             Options[Config.Prefix .. "_Number"] = bool
                         end, Flag = Config.Flag .. "_NUMBER"})
 
-                        Elements.Options.Font = Section:Dropdown({Name = "Font", Options = FontIndexes, Default = "Tahoma Bold", Callback = function(option)
+                        Elements.Options.Font = Section:Dropdown({Name = "Font", Options = FontIndexes, Default = "Tahoma", Callback = function(option)
                             Options[Config.Prefix .. "_Font"] = option
                         end, Flag = Config.Flag .. "_FONT"})
 
@@ -6415,7 +6415,7 @@
                             Options[Config.Prefix .. "_Text_Color"] = Flags[Config.Flag .. "_COLOR1"]
                         end, Flag = Config.Flag .. "_COLOR1", Color = props.Color1 or rgb(255, 255, 255)})
 
-                        Elements.Options.Font = Section:Dropdown({Name = "Font", Options = FontIndexes, Default = "Tahoma Bold", Callback = function(option)
+                        Elements.Options.Font = Section:Dropdown({Name = "Font", Options = FontIndexes, Default = "Tahoma", Callback = function(option)
                             Options[Config.Prefix .. "_Text_Font"] = option
                         end, Flag = Config.Flag .. "_FONT"})
 
@@ -7991,7 +7991,7 @@
                     });
 
                     Items.HealthbarText = Esp:Create( "TextLabel", {
-                        FontFace = Fonts.ProggyClean;
+                        FontFace = Fonts.fs-tahoma-8px;
                         TextColor3 = rgb(255, 255, 255);
                         BorderColor3 = rgb(0, 0, 0);
                         Parent = Esp.Cache; -- Items.HealthbarTextsLeft
@@ -8013,7 +8013,7 @@
 
                 -- Texts
                     Items.Text = Esp:Create( "TextLabel", {
-                        FontFace = Fonts.ProggyClean;
+                        FontFace = Fonts.fs-tahoma-8px;
                         TextColor3 = rgb(255, 255, 255);
                         BorderColor3 = rgb(0, 0, 0);
                         Parent = Esp.Cache;
@@ -8033,7 +8033,7 @@
                     });
 
                     Items.Distance = Esp:Create( "TextLabel", {
-                        FontFace = Fonts.ProggyClean;
+                        FontFace = Fonts.fs-tahoma-8px;
                         TextColor3 = rgb(255, 255, 255);
                         BorderColor3 = rgb(0, 0, 0);
                         Parent = Esp.Cache;
