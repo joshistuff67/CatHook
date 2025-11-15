@@ -1068,7 +1068,7 @@
         end 
         
         function Library:Round(num, float) 
-            local Multiplier = 1 / (float or 1)
+            local Multiplier = float or 1
             return math.floor(num * Multiplier + 0.5) / Multiplier
         end
 
