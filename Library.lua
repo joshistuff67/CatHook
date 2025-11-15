@@ -4915,7 +4915,6 @@
                     Library.DraggingSpeed = num
                 end})
                 Section:Label({Name = "Menu Bind"}):Keybind({Name = "Menu Bind", Key = Enum.KeyCode.E, Callback = function(bool) 
-                    print(bool)
                     Window.SetVisible(bool) 
                 end})
                 Window.Tweening = false
@@ -7367,7 +7366,6 @@
             if Cfg.Chams then 
                 local Toggle = self.Section:Toggle({Name = Cfg.Name .. " Chams", Callback = function(bool)
                     Options["ChamsEnabled"] = bool
-                    print("I am real", bool)
                 end, Flag = Cfg.Name .. "_CHAMS"})
 
                 Toggle:Colorpicker({Name = "Fill", Color = rgb(255, 255, 255), Transparency = 1, Callback = function(color, alpha)
