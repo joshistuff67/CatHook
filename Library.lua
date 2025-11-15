@@ -3105,13 +3105,15 @@
                 end)
             end)
 
-            Library:Connection(InputService.InputChanged, function(input)
-                if Cfg.Dragging and input.UserInputType == Enum.UserInputType.MouseMovement then 
-                    local Size = (input.Position.X - Items.Outline.AbsolutePosition.X) / Items.Outline.AbsoluteSize.X
-                    local Value = ((Cfg.Max - Cfg.Min) * Size) + Cfg.Min
-                    Cfg.Set(Value)
-                end
-            end)
+			Library:Connection(InputService.InputChanged, function(input)
+   			 	if Cfg.Dragging and input.UserInputType == Enum.UserInputType.MouseMovement then 
+        			local Size = (input.Position.X - Items.Outline.AbsolutePosition.X) / Items.Outline.AbsoluteSize.X
+        			local RawValue = ((Cfg.Max - Cfg.Min) * Size) + Cfg.Min
+        			local Step = 1 / Cfg.Intervals
+        			local Value = math.floor(RawValue / Step + 0.5) * Step
+        			Cfg.Set(Value)
+    			end
+			end)
 
             Library:Connection(InputService.InputEnded, function(input)
                 if input.UserInputType == Enum.UserInputType.MouseButton1 then
